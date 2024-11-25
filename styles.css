@@ -17,6 +17,7 @@ body {
     justify-content: space-between; /* Distribute space between logo and menu */
     align-items: center; /* Vertically center the items */
     width: 100%;
+    font-weight: 600;
 }
 
 /* Logo and Title (CHECKMYPLATE) container */
@@ -27,13 +28,14 @@ body {
     font-weight: bold;
     color: #2f5db3; /* Blue color for the title */
     text-decoration: none; /* Remove the underline */
+    margin-left: 80px;
 }
 
 /* Logo styles */
 .logo {
     height: 30px; /* Set logo size */
     width: auto; /* Maintain aspect ratio */
-    margin-right: 40px; /* Add space between logo and title */
+    margin-right: 20px; /* Add space between logo and title */
 }
 
 /* Navbar menu container */
@@ -45,7 +47,7 @@ body {
 
 /* Navbar menu items */
 .navbar__item {
-    margin-left: 20px; /* Add space between menu items */
+    margin-left: 60px; /* Add space between menu items */
 }
 
 .navbar__links {
@@ -57,16 +59,17 @@ body {
 
 /* Button styles */
 .navbar__btn {
-    margin-left: 20px; /* Space between the button and other items */
+    margin-left: 50px; /* Space between the button and other items */
 }
 
 .button {
     background-color: #e8fd63; /* Button background color */
     color: black;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none; /* Remove underline */
     font-weight: 600;
+    font-size: 15px;
 }
 
 .button:hover {

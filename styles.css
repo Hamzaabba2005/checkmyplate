@@ -1,29 +1,97 @@
-header {
+/* General reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
     background-color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
+    display: flex; /* Use flexbox to arrange elements */
+    justify-content: space-between; /* Distribute space between logo and menu */
+    align-items: center; /* Vertically center the items */
+    width: 100%;
 }
 
-.container {
-    display: flex;
-    align-items: center; 
-    justify-content: left;  
-}
-
-.logo {
-    width: 35px; 
-    height: auto; 
-    position: relative;
-    left: 50px;
-
-}
-
-/* Style the title */
-h1 {
-    font-family: 'Arial', sans-serif;
+/* Logo and Title (CHECKMYPLATE) container */
+#navbar__logo {
+    display: flex; /* Align logo and title horizontally */
+    align-items: center; /* Vertically align logo and text */
     font-size: 22px;
     font-weight: bold;
-    color: #2f5db3;
-    margin: 0;  /* Remove default margin from h1 */
-    position: relative;
-    left: 50px;
+    color: #2f5db3; /* Blue color for the title */
+    text-decoration: none; /* Remove the underline */
+}
+
+/* Logo styles */
+.logo {
+    height: 30px; /* Set logo size */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 40px; /* Add space between logo and title */
+}
+
+/* Navbar menu container */
+.navbar__menu {
+    list-style: none;
+    display: flex; /* Display menu items horizontally */
+    margin-left: auto; /* Push the menu to the right */
+}
+
+/* Navbar menu items */
+.navbar__item {
+    margin-left: 20px; /* Add space between menu items */
+}
+
+.navbar__links {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+/* Button styles */
+.navbar__btn {
+    margin-left: 20px; /* Space between the button and other items */
+}
+
+.button {
+    background-color: #e8fd63; /* Button background color */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #2f5db3; /* Darker blue on hover */
+}
+
+/* Hover effects for the navbar links */
+.navbar__links:hover {
+    color: #2f5db3; /* Blue color for links on hover */
+}
+
+/* Media Queries for responsiveness (Optional for mobile view) */
+@media (max-width: 768px) {
+    .navbar__menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .navbar__toggle {
+        display: block; /* Display the hamburger icon on small screens */
+        cursor: pointer;
+    }
+
+    /* Show the menu when mobile menu is active */
+    #mobile-menu.active + .navbar__menu {
+        display: flex;
+    }
 }

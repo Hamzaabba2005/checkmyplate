@@ -43,7 +43,7 @@ body {
 .navbar__menu {
     list-style: none;
     display: flex; /* Display menu items horizontally */
-    justify-content: flex-end; /* Align items closer to the right */
+    justify-content: center; /* Align items closer to the right */
     padding: 0;
     margin: 0;
     flex: 1;
@@ -98,7 +98,7 @@ body {
 
 .blue-box {
     background-color: #b5ccf6; /* Box color */
-    height: 900px; /* Adjust height as needed */
+    height: 650px; /* Adjust height as needed */
     width: 100%; /* Full width of the page */
     margin-top: 0; /* Ensure it sticks directly under the navbar */
 }
@@ -113,17 +113,19 @@ body {
 .homepagetitle-text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-align: center;
-    font-size: 50px;
-    padding-top: 50px;
+    text-align: left;
+    font-size: 60px;
+    padding-top: 120px;
+    padding-left: 100px;
 }
 
 .homepagedescription-text {
     font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
     font-size: 20px;
-    text-align: center;
-    padding-top: 35px;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 100px;
+
 }
 
 /* Media Queries for responsiveness (Optional for mobile view) */

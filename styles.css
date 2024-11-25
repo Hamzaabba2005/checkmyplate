@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:sans-serif;
 }
 
 /* Navbar container */
@@ -17,7 +17,7 @@ body {
     justify-content: space-between; /* Distribute space between logo and menu */
     align-items: center; /* Vertically center the items */
     width: 100%;
-    font-weight: 600;
+    font-weight: 500;
     height: 80px;
 }
 
@@ -68,13 +68,24 @@ body {
 }
 
 .button {
-    background-color: #e8fd63; /* Button background color */
-    color: black;
+    background-color: #0071E3; /* Button background color */
+    color: white;
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 25px;
     text-decoration: none; /* Remove underline */
     font-weight: 600;
     font-size: 15px;
+}
+
+.button1 {
+    background-color: white; /* Button background color */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none; /* Remove underline */
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid black;
 }
 
 .button:hover {
@@ -88,7 +99,7 @@ body {
 
 .blue-box {
     background-color: #b5ccf6; /* Box color */
-    height: 600px; /* Adjust height as needed */
+    height: 900px; /* Adjust height as needed */
     width: 100%; /* Full width of the page */
     margin-top: 0; /* Ensure it sticks directly under the navbar */
 }
@@ -103,20 +114,17 @@ body {
 .homepagetitle-text{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     font-size: 50px;
-    margin-right: 300px;
-    margin-left: 100px;
-    padding-top: 50px;    
+    padding-top: 50px;
 }
 
 .homepagedescription-text{
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size: 20px;
-    margin-right: 300px;
-    margin-left: 100px;
-    padding-top: 25px;    
+    text-align: center;
+    padding-top: 35px;    
 }
 
 /* Media Queries for responsiveness (Optional for mobile view) */

@@ -86,6 +86,30 @@ body {
     color: #2f5db3; /* Blue color for links on hover */
 }
 
+.blue-box {
+    background-color: #b5ccf6; /* Box color */
+    height: 600px; /* Adjust height as needed */
+    width: 100%; /* Full width of the page */
+    margin-top: 0; /* Ensure it sticks directly under the navbar */
+}
+
+.white-box {
+    background-color: white; /* Box color */
+    height: 600px; /* Adjust height as needed */
+    width: 100%; /* Full width of the page */
+    margin-top: 0; /* Ensure it sticks directly under the navbar */
+}
+
+.name-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 50px;
+    margin-right: 300px;
+    margin-left: 100px;
+    padding-top: 100px;    
+}
+
 /* Media Queries for responsiveness (Optional for mobile view) */
 @media (max-width: 768px) {
     .navbar__menu {

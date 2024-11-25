@@ -11,13 +11,14 @@ body {
 
 /* Navbar container */
 .navbar {
-    background-color: #fff;
+    background-color: white;
     padding: 10px 20px;
     display: flex; /* Use flexbox to arrange elements */
     justify-content: space-between; /* Distribute space between logo and menu */
     align-items: center; /* Vertically center the items */
     width: 100%;
     font-weight: 600;
+    height: 80px;
 }
 
 /* Logo and Title (CHECKMYPLATE) container */
@@ -42,7 +43,11 @@ body {
 .navbar__menu {
     list-style: none;
     display: flex; /* Display menu items horizontally */
-    margin-left: auto; /* Push the menu to the right */
+    flex: 1; /* Allow this section to grow and fill available space */
+    justify-content: center; /* Center the menu items */
+    padding: 0;
+    margin: 0;
+    margin-right: 400px;
 }
 
 /* Navbar menu items */

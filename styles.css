@@ -1,0 +1,29 @@
+header {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: left;  
+}
+
+.logo {
+    width: 35px; 
+    height: auto; 
+    position: relative;
+    left: 50px;
+
+}
+
+/* Style the title */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2f5db3;
+    margin: 0;  /* Remove default margin from h1 */
+    position: relative;
+    left: 50px;
+}

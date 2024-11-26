@@ -203,9 +203,6 @@ input[type="text"]::placeholder {
     height: 50%; /* Maintain the aspect ratio */
 }
 
-
-
-
 /* Media Queries for responsiveness (Optional for mobile view) */
 @media (max-width: 768px) {
     .navbar {

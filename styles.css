@@ -97,7 +97,7 @@ body {
 }
 
 .blue-box {
-    background-color: #b5ccf6; /* Box color */
+    background-color: rgb(182, 221, 245); /* Box color #b5ccf6 */
     height: 650px; /* Adjust height as needed */
     width: 100%; /* Full width of the page */
     margin-top: 0; /* Ensure it sticks directly under the navbar */
@@ -127,6 +127,84 @@ body {
     padding-left: 100px;
 
 }
+.input-container {
+    margin: 40px auto; /* Center the container */
+    text-align: left; /* Keep the text aligned to the left inside the container */
+    padding-left: 90px;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    display: block; /* Place the label above the input box */
+    margin-bottom: 8px; /* Add some space between the label and input */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-with-button {
+    position: relative; /* Relative positioning for the input container */
+    display: inline-block; /* Let the input and button stay together */
+}
+
+input[type="text"] {
+    font-family: sans-serif;
+    padding: 10px;
+    height: 100px;
+    width: 600px; /* Width of the input box */
+    border: 0px solid #ccc;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 70px; /* Add space on the right for the button */
+    text-transform: uppercase;
+}
+
+input[type="text"]:focus {
+    border-color: #000000; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for placeholder text */
+input[type="text"]::placeholder {
+    text-transform: capitalize /* Make the placeholder text lowercase */
+}
+
+/* Positioning for the submit button */
+.submit-btn {
+    position: absolute; /* Position the button inside the input field */
+    top: 50%; /* Vertically center the button */
+    right: 10px; /* Space from the right edge of the input */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    height: 60px;
+    width: 200px; /* Adjust button size */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* Removed the border */
+    color: black;
+    background-color: lightgreen;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Positioning and styling for the image */
+.vehicle-check-image {
+    position: absolute; /* Position image inside the same container */
+    top: 50%; /* Vertically align it with the button */
+    transform: translateY(-50%); /* Center the image vertically */
+    right: 2%; /* Position the image towards the right with some space */
+    max-width: 40%; /* Set the max width to 40% of the container's width */
+    height: 50%; /* Maintain the aspect ratio */
+}
+
+
+
 
 /* Media Queries for responsiveness (Optional for mobile view) */
 @media (max-width: 768px) {

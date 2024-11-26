@@ -72,7 +72,6 @@ body {
     padding: 0.8vh 1.5vw; /* Relative padding */
     border-radius: 25px;
     text-decoration: none; /* Remove underline */
-    font-weight: 600;
     font-size: 1rem; /* Scalable font size */
 }
 
@@ -97,7 +96,7 @@ body {
 }
 
 .green-box {
-    background-color: rgba(192, 245, 192, 0.932); /* Box color rgb(182, 221, 245)*/
+    background-color: rgba(211, 250, 211, 0.932); /* Box color rgb(182, 221, 245)*/
     height: 80vh; /* Adjust height as percentage of viewport */
     width: 100%; /* Full width of the page */
     margin-top: 0; /* Ensure it sticks directly under the navbar */
@@ -121,8 +120,9 @@ body {
 
 .homepagedescription-text {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw; /* Scalable font size */
+    font-size: 1.2vw; /* Scalable font size */
     text-align: left;
+    font-weight: lighter;
     padding-top: 3vh;
     padding-left: 5vw;
 }
@@ -152,14 +152,16 @@ label {
 
 input[type="text"] {
     font-family: sans-serif;
-    padding: 10px;
+    padding: 40px;
     height: 6vh; /* Proportional height */
     width: calc(100% - 100px); /* Adjust input width to account for button */
     border: 1px solid #ccc; /* Add subtle border for visibility */
-    border-radius: 30px; /* Rounded corners for input */
+    border-radius: 15px; /* Rounded corners for input */
     font-size: 1.2rem; /* Scalable font size */
     text-align: left;
-    padding-left: 20px; /* Space for input text */
+    padding-left: 60px; /* Space for input text */
+    background: 
+        linear-gradient(to right, rgb(11, 56, 206) 10%, white 10%); /* Blue at the start */
     text-transform: uppercase;
     box-sizing: border-box; /* Include padding in width calculations */
 }
@@ -174,20 +176,40 @@ input[type="text"]::placeholder {
     text-transform: capitalize; /* Capitalize placeholder text */
 }
 
+.gb-flag {
+    position: absolute; /* Absolute positioning for the flag */
+    left: 11px; /* Position the flag on the left */
+    top: 35%; /* Center the flag vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    width: 30px; /* Adjust the width of the flag */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px;
+}
+
+.uk-text {
+    position: absolute;
+    top: 45px;
+    left: 13px; /* Position 'UK' text next to the GB flag */
+    bottom: 10px; /* Place it near the bottom of the input field */
+    font-size: 1rem; /* Adjust the font size of 'UK' */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Make it bold */
+}
+
 /* Button inside the input field */
 .submit-btn {
     position: absolute; /* Positioned relative to the container */
     top: 50%; /* Vertically align with input */
-    right: 105px; /* Spacing from container's right edge */
+    right: 110px; /* Spacing from container's right edge */
     transform: translateY(-50%); /* Center button vertically */
-    height: 80%; /* Button height relative to input */
+    height: 65%; /* Button height relative to input */
+    width: 30%;
     padding: 0 20px; /* Padding inside the button */
     font-size: 1rem; /* Scalable font size */
-    font-weight: bold;
     border: none; /* Remove button border */
     color: white;
     background-color: #0071E3; /* Button background */
-    border-radius: 25px; /* Rounded corners for button */
+    border-radius: 35px; /* Rounded corners for button */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

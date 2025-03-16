@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   return (
     <div className="App" style={styles.container}>
-      <h1 style={styles.heading}>🚗 CarStuff101 🚗</h1>
-      <p style={styles.text}>Welcome to my brand new React-powered site!</p>
+      <h1 style={styles.heading}>🚗 CheckMyPlate 🚗</h1>
+      <p style={styles.text}>Welcome to my brand new website!</p>
       <p style={styles.subText}>More updates coming soon. Stay tuned! 🔧</p>
     </div>
   );

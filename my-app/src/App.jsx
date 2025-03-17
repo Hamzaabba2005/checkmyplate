@@ -1,3 +1,7 @@
+import { motion } from "framer-motion";
+import './index.css'; // where Tailwind is applied
+
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen">

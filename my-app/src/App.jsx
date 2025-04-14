@@ -1,50 +1,65 @@
-import React, { useState } from 'react';
-import './index.css';
+import { useState } from 'react';
 
-function App() {
-  const [numberPlate, setNumberPlate] = useState('');
+export default function App() {
+    const [reg, setReg] = useState('');
+    const [result, setResult] = useState(null);
+    const [error, setError] = useState('');
 
-  const handleInputChange = (event) => {
-    const value = event.target.value.toUpperCase().replace(/\s/g, '');
-    if (value.length <= 7) {
-      setNumberPlate(value);
-    }
-  };
+    const handleSearch = () => {
+        if (!reg || reg.length < 4) {
+            setError("Please enter a valid registration number.");
+            setResult(null);
+            return;
+        }
 
-  return (
-      <div className="min-h-screen bg-gray-100">
-        <header className="bg-blue-600 text-white p-6 shadow-md flex flex-col md:flex-row items-center justify-between">
-          <h1 className="text-3xl font-bold">🚗 CHECKMYPLATE</h1>
-          <nav className="mt-4 md:mt-0">
-            <ul className="flex gap-4 text-white font-medium text-sm md:text-base">
-              <li><a href="#reports" className="hover:underline">Reports</a></li>
-              <li><a href="#blog" className="hover:underline">Blog</a></li>
-              <li><a href="#login" className="hover:underline">Log In</a></li>
-              <li><a href="#signup" className="hover:underline">Sign Up</a></li>
-              <li><a href="#download" className="bg-white text-blue-600 px-3 py-1 rounded hover:bg-gray-200">Download App</a></li>
-            </ul>
-          </nav>
-        </header>
+        setError('');
 
-        <main className="flex flex-col items-center justify-center mt-20 px-4">
-          <label htmlFor="reg-input" className="text-lg font-semibold mb-2">Enter your registration number</label>
-          <input
-              id="reg-input"
-              type="text"
-              className="text-center p-3 w-64 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-xl tracking-widest uppercase shadow"
-              placeholder="ENTER REG"
-              value={numberPlate}
-              onChange={handleInputChange}
-              maxLength="7"
-          />
-          {numberPlate && (
-              <p className="mt-4 text-green-600 font-semibold">
-                You entered: <span className="underline">{numberPlate}</span>
-              </p>
-          )}
-        </main>
-      </div>
-  );
+        // Mock result (simulate API call)
+        setResult({
+            reg: reg.toUpperCase(),
+            make: 'BMW',
+            model: '3 Series',
+            year: 2020,
+            mileage: '45,000 miles',
+            status: 'No outstanding finance',
+            stolen: false,
+        });
+    };
+
+    return (
+        <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
+            <h1 className="text-4xl font-bold mb-6 text-center">CheckMyPlate 🚗</h1>
+
+            <div className="w-full max-w-md flex flex-col items-center">
+                <input
+                    type="text"
+                    placeholder="Enter Reg Number (e.g. AB12 CDE)"
+                    value={reg}
+                    onChange={(e) => setReg(e.target.value.toUpperCase())}
+                    className="text-black w-full p-3 rounded-lg shadow mb-3 text-center text-lg tracking-widest"
+                />
+                <button
+                    onClick={handleSearch}
+                    className="bg-blue-600 hover:bg-blue-800 transition text-white px-6 py-2 rounded-lg shadow w-full"
+                >
+                    Check Vehicle
+                </button>
+
+                {error && <p className="text-red-400 mt-4">{error}</p>}
+
+                {result && (
+                    <div className="mt-6 p-6 bg-white text-black rounded-lg shadow w-full">
+                        <h2 className="text-xl font-bold mb-2">🔍 HPI Report</h2>
+                        <p><strong>Reg:</strong> {result.reg}</p>
+                        <p><strong>Make:</strong> {result.make}</p>
+                        <p><strong>Model:</strong> {result.model}</p>
+                        <p><strong>Year:</strong> {result.year}</p>
+                        <p><strong>Mileage:</strong> {result.mileage}</p>
+                        <p><strong>Status:</strong> {result.status}</p>
+                        <p><strong>Stolen:</strong> {result.stolen ? 'Yes 🚨' : 'No ✅'}</p>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
 }
-
-export default App;

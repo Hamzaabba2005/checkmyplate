@@ -6,7 +6,7 @@ export default function App() {
     return (
         <div className="min-h-screen bg-white text-gray-900 flex flex-col">
             {/* Header */}
-            <header className="bg-white shadow-sm">
+            <header className="bg-gray-100 shadow-sm">
                 <div className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
                     <h1 className="text-3xl font-bold tracking-tight">CheckMyPlate</h1>
                     <nav className="hidden md:flex gap-8 text-base text-gray-600">

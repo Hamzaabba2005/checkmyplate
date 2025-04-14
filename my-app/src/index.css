@@ -1,26 +1,2 @@
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Optional: Keep your custom styles below */
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";

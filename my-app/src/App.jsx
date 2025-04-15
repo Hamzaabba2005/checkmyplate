@@ -224,7 +224,7 @@ export default function App() {
 
 
 
-            {/* Reviews Section */}
+            {/* Reviews Sections */}
             <section className="bg-gray-50 py-20 px-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <h3 className="text-4xl font-bold mb-12">What People Are Saying</h3>

@@ -55,7 +55,7 @@ export default function App() {
             </header>
 
             <section className="bg-white">
-                <div className="max-w-6xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-20 items-center">
+                <div className="max-w-6xl mx-auto px-0 py-20 grid md:grid-cols-2 gap-20 items-center">
                     <div className="md:ml-0">
                         <h2 className="text-6xl font-extrabold leading-tight mb-10">
                             1 in 3 UK cars <br />

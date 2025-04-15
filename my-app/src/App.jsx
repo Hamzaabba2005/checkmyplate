@@ -197,7 +197,7 @@ export default function App() {
                     <div>
                         <h3 className="text-4xl font-bold mb-4">Check your vehicle history on the go</h3>
                         <p className="text-lg text-gray-300 mb-6 max-w-md">
-                            Download the CheckMyPlate app and run car checks anywhere, anytime. Fast, secure, and always in your pocket.
+                            Download the CheckMyPlate app and run car checks anywhere, anytime. Fast, secure, and always in your pocket!
                         </p>
                         <a
                             href="https://apps.apple.com/gb/app/checkmyplate/id6683283815"

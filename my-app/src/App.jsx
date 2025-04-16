@@ -21,7 +21,10 @@ export default function App() {
             {/* Header */}
             <header className="bg-gray-100 shadow-sm">
                 <div className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-                    <h1 className="text-3xl font-bold tracking-tight">CheckMyPlate</h1>
+                    <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
+                        <img src="/icon-modified.png" alt="CheckMyPlate logo" className="h-8 w-8 object-contain" />
+                        CheckMyPlate
+                    </h1>
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex gap-8 text-base text-gray-600">
@@ -72,11 +75,18 @@ export default function App() {
                             1 in 3 UK cars <br />
                             <span className="text-red-600">have a hidden past</span>
                         </h2>
-                        <p className="text-2xl text-gray-600 mb-10">
+                        <p className="text-xl text-gray-600 mb-10">
                             Including accidents, theft, write-offs or finance owed. Enter your reg to check your vehicle now.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        {/* Wrap input and button in a form */}
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault(); // prevent page reload
+                                handleCheckNow();
+                            }}
+                            className="flex flex-col sm:flex-row gap-4"
+                        >
                             <input
                                 type="text"
                                 value={reg}
@@ -85,12 +95,12 @@ export default function App() {
                                 className="flex-1 px-6 py-5 rounded-md border border-gray-300 text-xl tracking-widest text-center"
                             />
                             <button
-                                onClick={handleCheckNow}
+                                type="submit"
                                 className="bg-black text-white px-10 py-5 rounded-md hover:bg-gray-800 transition text-xl font-semibold"
                             >
                                 Check Now
                             </button>
-                        </div>
+                        </form>
                     </div>
 
                     {/* Car Icon */}
@@ -104,36 +114,37 @@ export default function App() {
                 </div>
             </section>
 
+            <section id="pricing" className="bg-gray-50 py-16">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold mb-4 text-gray-900">Choose Your Report</h2>
+                        <p className="text-gray-600 text-lg">Get the details you need before you buy. Simple, transparent pricing.</p>
+                    </div>
 
-
-            <section id="pricing" className="max-w-7xl mx-auto px-6 py-10">
-                <div className="flex flex-col md:flex-row justify-center items-center gap-14">
-
-                    {/* Full Report */}
-                    <div className="bg-green-100 rounded-2xl w-full max-w-[600px] h-[360px] flex items-center justify-center text-center px-12">
-                        <div>
-                            <h4 className="text-4xl font-bold mb-3">Full Report</h4>
-                            <p className="text-xl text-gray-700 mb-1">50% Off – £4.99</p>
-                            <p className="text-xl text-gray-700 mb-8">Covers all vital information</p>
-                            <button className="bg-green-500 text-white px-8 py-4 rounded-lg hover:bg-green-600 text-lg font-semibold transition">
+                    <div className="grid md:grid-cols-2 gap-10">
+                        {/* Full Report */}
+                        <div className="bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                            <h4 className="text-3xl font-semibold mb-3 text-green-900">Full Report</h4>
+                            <p className="text-xl text-green-800 mb-1">£4.99 <span className="text-sm text-green-600 font-medium">(50% Off Today)</span></p>
+                            <p className="text-green-700 mb-6">Full history check including finance, write-off, theft, mileage, and more.</p>
+                            <button className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 text-lg font-medium transition">
                                 Get Full Report
                             </button>
                         </div>
-                    </div>
 
-                    {/* Sample Report */}
-                    <div className="bg-yellow-100 rounded-2xl w-full max-w-[600px] h-[360px] flex items-center justify-center text-center px-12">
-                        <div>
-                            <h4 className="text-4xl font-bold mb-3">Sample Full Report</h4>
-                            <p className="text-xl text-gray-700 mb-8">See what's included</p>
-                            <button className="bg-yellow-500 text-white px-8 py-4 rounded-lg hover:bg-yellow-600 text-lg font-semibold transition">
+                        {/* Sample Report */}
+                        <div className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                            <h4 className="text-3xl font-semibold mb-3 text-yellow-900">Sample Full Report</h4>
+                            <p className="text-yellow-700 mb-6">Preview a real sample full report to see what’s included before purchasing.</p>
+                            <button className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 text-lg font-medium transition">
                                 View Sample
                             </button>
                         </div>
                     </div>
-
                 </div>
             </section>
+
+
 
             {/* Trusted By Section */}
             <section className="bg-white py-10 px-6">

@@ -1,9 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function App() {
     const [reg, setReg] = useState("");
     const [isOpen, setIsOpen] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleCheckNow = () => {
+        if (reg.trim()) {
+            navigate(`/check/${reg}`);
+        }
+    };
+
 
     return (
         <div className="min-h-screen bg-white text-gray-900 flex flex-col">
@@ -55,7 +66,7 @@ export default function App() {
             </header>
 
             <section className="bg-white">
-                <div className="max-w-6xl mx-auto px-0 py-20 grid md:grid-cols-2 gap-20 items-center">
+                <div className="max-w-6xl mx-auto px-0 py-15 grid md:grid-cols-2 gap-20 items-center">
                     <div className="md:ml-0">
                         <h2 className="text-6xl font-extrabold leading-tight mb-10">
                             1 in 3 UK cars <br />
@@ -73,7 +84,10 @@ export default function App() {
                                 placeholder="ENTER REG"
                                 className="flex-1 px-6 py-5 rounded-md border border-gray-300 text-xl tracking-widest text-center"
                             />
-                            <button className="bg-black text-white px-10 py-5 rounded-md hover:bg-gray-800 transition text-xl font-semibold">
+                            <button
+                                onClick={handleCheckNow}
+                                className="bg-black text-white px-10 py-5 rounded-md hover:bg-gray-800 transition text-xl font-semibold"
+                            >
                                 Check Now
                             </button>
                         </div>
@@ -92,7 +106,7 @@ export default function App() {
 
 
 
-            <section id="pricing" className="max-w-7xl mx-auto px-6 py-28">
+            <section id="pricing" className="max-w-7xl mx-auto px-6 py-10">
                 <div className="flex flex-col md:flex-row justify-center items-center gap-14">
 
                     {/* Full Report */}
@@ -122,7 +136,7 @@ export default function App() {
             </section>
 
             {/* Trusted By Section */}
-            <section className="bg-white py-20 px-6">
+            <section className="bg-white py-10 px-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <h3 className="text-3xl font-bold mb-8">Trusted by thousands of UK drivers</h3>
                     <p className="text-lg text-gray-600 mb-6">Our reports have helped over <strong>1 million users</strong> avoid scams, uncover hidden problems, and buy cars with confidence.</p>
@@ -159,7 +173,7 @@ export default function App() {
             </section>
 
             {/* How It Works Section */}
-            <section className="bg-white py-24 px-6">
+            <section className="bg-white py-18 px-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <h3 className="text-4xl font-bold mb-14">How It Works</h3>
                     <div className="grid md:grid-cols-3 gap-10 text-left">
@@ -169,7 +183,7 @@ export default function App() {
                             { step: "3", title: "Make Smart Decisions", desc: "Buy (or walk away) with complete confidence." },
                         ].map((item, idx) => (
                             <div key={idx} className="flex items-start space-x-4">
-                                <div className="text-2xl font-bold bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">{item.step}</div>
+                                <div className="text-2xl font-bold bg-black text-white w-15 h-10 rounded-full flex items-center justify-center">{item.step}</div>
                                 <div>
                                     <h4 className="text-xl font-semibold mb-1">{item.title}</h4>
                                     <p className="text-gray-600">{item.desc}</p>

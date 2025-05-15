@@ -30,6 +30,7 @@ export default function App() {
                     <nav className="hidden md:flex gap-8 text-base text-gray-600">
                         <a href="#pricing" className="hover:text-black">Pricing</a>
                         <a href="#faq" className="hover:text-black">FAQ</a>
+                        <a href="#pricing" className="hover:text-black">Blog</a>
                         <a href="#login" className="hover:text-black">Log In</a>
                         <a href="#signup" className="hover:text-black">Sign Up</a>
                         <a
